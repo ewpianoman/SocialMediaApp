@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {getFontFamily} from '../../assets/fonts/helper';
 
 const style = StyleSheet.create({
   messageIcon: {
@@ -25,9 +26,7 @@ const style = StyleSheet.create({
   },
   messageNumber: {
     color: '#fff',
-    fontFamily: 'Inter',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+    fontFamily: getFontFamily('Inter', '600'),
     fontSize: 6,
     lineHeight: 7,
   },

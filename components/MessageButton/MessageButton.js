@@ -9,11 +9,11 @@ const MessageButton = props => {
   return (
     <TouchableOpacity style={style.messageIcon}>
       <FontAwesomeIcon icon={faEnvelope} size={20} style={style.envelope} />
-      {props.messageCount !== 0 ? (
+      {props.messageCount !== 0 && (
         <View style={style.messageNumberContainer}>
           <Text style={style.messageNumber}>{props.messageCount}</Text>
         </View>
-      ) : null}
+      )}
     </TouchableOpacity>
   );
 };
