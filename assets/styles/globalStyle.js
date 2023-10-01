@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {horizontalScale, verticalScale} from './scaling';
 
 const globalStyle = StyleSheet.create({
   appContainer: {
@@ -11,11 +12,11 @@ const globalStyle = StyleSheet.create({
     justifyContent: 'space-between',
   },
   userStoryContainer: {
-    marginBottom: 30,
+    marginBottom: verticalScale(30),
   },
   userPostContainer: {
-    marginTop: 20,
-    marginHorizontal: 24,
+    marginTop: verticalScale(20),
+    marginHorizontal: horizontalScale(24),
   },
 });
 

@@ -10,6 +10,7 @@ import {
   faCommentDots,
   faBookmark,
 } from '@fortawesome/free-regular-svg-icons';
+import {horizontalScale, scaleFontSize} from '../../assets/styles/scaling';
 
 const UserPost = props => {
   return (
@@ -18,7 +19,7 @@ const UserPost = props => {
         <View style={style.userContainer}>
           <UserProfileImage
             profileImage={props.profileImage}
-            imageDimensions={48}
+            imageDimensions={horizontalScale(48)}
           />
           <View style={style.infoContainer}>
             <TouchableOpacity>
@@ -32,7 +33,11 @@ const UserPost = props => {
           </View>
         </View>
         <TouchableOpacity style={style.menuIconContainer}>
-          <FontAwesomeIcon icon={faEllipsis} size={24} style={style.menuIcon} />
+          <FontAwesomeIcon
+            icon={faEllipsis}
+            size={scaleFontSize(24)}
+            style={style.menuIcon}
+          />
         </TouchableOpacity>
       </View>
       <View style={style.postImageContainer}>
@@ -46,7 +51,7 @@ const UserPost = props => {
         <TouchableOpacity style={style.interaction}>
           <FontAwesomeIcon
             icon={faHeart}
-            size={20}
+            size={scaleFontSize(20)}
             style={style.interactionIcon}
           />
           <Text style={style.interactionCount}>{props.likes}</Text>
@@ -54,7 +59,7 @@ const UserPost = props => {
         <TouchableOpacity style={style.interaction}>
           <FontAwesomeIcon
             icon={faCommentDots}
-            size={20}
+            size={scaleFontSize(20)}
             style={style.interactionIcon}
           />
           <Text style={style.interactionCount}>{props.comments}</Text>
@@ -62,7 +67,7 @@ const UserPost = props => {
         <TouchableOpacity style={style.interaction}>
           <FontAwesomeIcon
             icon={faBookmark}
-            size={20}
+            size={scaleFontSize(20)}
             style={style.interactionIcon}
           />
           <Text style={style.interactionCount}>{props.bookmarks}</Text>

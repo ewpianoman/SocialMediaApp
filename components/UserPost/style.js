@@ -1,12 +1,17 @@
 import {StyleSheet} from 'react-native';
 import {getFontFamily} from '../../assets/fonts/helper';
+import {
+  horizontalScale,
+  scaleFontSize,
+  verticalScale,
+} from '../../assets/styles/scaling';
 
 const style = StyleSheet.create({
   postContainer: {
-    borderBottomWidth: 1,
+    borderBottomWidth: scaleFontSize(1),
     borderBottomColor: '#EFF2F6',
-    marginBottom: 20,
-    paddingBottom: 20,
+    marginBottom: verticalScale(20),
+    paddingBottom: verticalScale(20),
   },
   postHeader: {
     flexDirection: 'row',
@@ -17,53 +22,48 @@ const style = StyleSheet.create({
     flexDirection: 'row',
   },
   infoContainer: {
-    marginLeft: 10,
+    marginLeft: horizontalScale(10),
     justifyContent: 'center',
   },
   name: {
     color: '#000',
     fontFamily: getFontFamily('Inter', '500'),
-    fontSize: 16,
-    letterSpacing: 0.16,
-    marginBottom: 3,
+    fontSize: scaleFontSize(16),
+    letterSpacing: scaleFontSize(0.16),
+    marginBottom: verticalScale(3),
   },
   location: {
     color: '#79869F',
     fontFamily: getFontFamily('Inter', '400'),
-    fontSize: 12,
-    letterSpacing: 0.12,
+    fontSize: scaleFontSize(12),
+    letterSpacing: scaleFontSize(0.12),
   },
   menuIconContainer: {},
   menuIcon: {
     color: '#79869F',
   },
   postImageContainer: {
-    marginTop: 20,
+    marginTop: verticalScale(20),
     alignItems: 'center',
-    width: '100%',
-    height: 220,
   },
-  postImage: {
-    width: '100%',
-    borderRadius: 20,
-  },
+  postImage: {},
   interactionsContainer: {
     flexDirection: 'row',
-    marginTop: 20,
-    marginLeft: 5,
+    marginTop: verticalScale(20),
+    marginLeft: horizontalScale(5),
     alignItems: 'center',
   },
   interaction: {
     flexDirection: 'row',
-    marginRight: 27,
+    marginRight: horizontalScale(27),
   },
   interactionIcon: {
     color: '#79869F',
-    marginRight: 5,
+    marginRight: horizontalScale(5),
   },
   interactionCount: {
     color: '#79869F',
-    fontSize: 14,
+    fontSize: scaleFontSize(14),
     fontFamily: getFontFamily('Inter', 500),
   },
 });
