@@ -5,15 +5,10 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons/faEnvelope';
 import style from './style';
 import {scaleFontSize} from '../../assets/styles/scaling';
-import {useNavigation} from '@react-navigation/native';
 
 const MessageButton = props => {
-  const navigation = useNavigation();
-
   return (
-    <TouchableOpacity
-      style={style.messageIcon}
-      onPress={() => navigation.navigate(props.screenName)}>
+    <TouchableOpacity style={style.messageIcon}>
       <FontAwesomeIcon
         icon={faEnvelope}
         size={scaleFontSize(20)}
