@@ -5,6 +5,7 @@ import UserProfileImage from '../../components/UserProfileImage/UserProfileImage
 import ProfileStat from '../../components/ProfileStat/ProfileStat';
 import {horizontalScale} from '../../assets/styles/scaling';
 import style from './style';
+import {ProfileTabNavivation} from '../../navigation/MainNavigation';
 
 const Profile = ({navigation}) => {
   return (
@@ -23,6 +24,9 @@ const Profile = ({navigation}) => {
           <ProfileStat stat="30M" statType="Followers" />
           <View style={style.verticalDivider} />
           <ProfileStat stat="100" statType="Posts" />
+        </View>
+        <View style={globalStyle.flex}>
+          <ProfileTabNavivation />
         </View>
       </ScrollView>
     </SafeAreaView>

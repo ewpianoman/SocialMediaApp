@@ -10,6 +10,11 @@ const globalStyle = StyleSheet.create({
   flexGrow: {
     flexGrow: 1,
   },
+  center: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default globalStyle;
